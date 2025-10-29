@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  /* Linear Brand Colors */
+  --linear-blue: #5E6AD2;
+  --linear-mercury: #F4F5F8;
+  --linear-nordic: #232326;
+  
+  /* Dark Theme (Primary) */
+  --bg-primary: #0D0E10;
+  --bg-secondary: #1A1A1A;
+  --bg-elevated: #232326;
+  --text-primary: #FFFFFF;
+  --text-secondary: #9CA3AF;
+  --text-tertiary: #6B7280;
+  --border: #2F2F32;
+  --border-light: #3A3A3D;
+  --accent: #6B7FE8;
+  --accent-hover: #5E6AD2;
+  
+  /* Subtle overlays */
+  --overlay: rgba(255, 255, 255, 0.02);
+  --overlay-hover: rgba(255, 255, 255, 0.04);
+}
+
+@theme inline {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-border: var(--border);
+  --color-border-light: var(--border-light);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --font-sans: var(--font-inter);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Linear-inspired subtle animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
